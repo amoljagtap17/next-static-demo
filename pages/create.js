@@ -1,8 +1,7 @@
 import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid'
-import { Form, Input, Button, Typography, Divider } from 'antd'
-
-const { Title } = Typography
+import { Form, Input, Button } from 'antd'
+import { Heading } from 'components/Heading'
 
 const layout = {
   labelCol: {
@@ -40,10 +39,7 @@ export default function Create() {
 
   return (
     <>
-      <Typography>
-        <Title>Create Blog</Title>
-        <Divider />
-      </Typography>
+      <Heading title="Create Blog" />
       <Form
         {...layout}
         name="createPost"

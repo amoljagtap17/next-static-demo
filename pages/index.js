@@ -1,12 +1,11 @@
-import { Typography, Divider } from 'antd'
-
-const { Title } = Typography
+import { BlogList } from 'components/BlogList'
+import { Heading } from 'components/Heading'
 
 export default function Home() {
   return (
-    <Typography>
-      <Title>Blog List</Title>
-      <Divider />
-    </Typography>
+    <>
+      <Heading title="Blog List" />
+      <BlogList />
+    </>
   )
 }
