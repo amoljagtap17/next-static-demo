@@ -1,3 +1,12 @@
+import { Typography, Divider } from 'antd'
+
+const { Title } = Typography
+
 export default function Home() {
-  return <h1>Hello Next</h1>
+  return (
+    <Typography>
+      <Title>Post List</Title>
+      <Divider />
+    </Typography>
+  )
 }
