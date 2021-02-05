@@ -21,3 +21,9 @@ a {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.ant-list-item-action > li {
+  font-size: 16px;
+  color: darkslategray;
+  font-weight: 500;
+}

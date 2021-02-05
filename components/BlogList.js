@@ -20,7 +20,7 @@ export const BlogList = () => {
           <List.Item
             actions={[
               <Link href={`/edit?id=${id}`}>
-                <a key="list-loadmore-edit">edit</a>
+                <a key="list-loadmore-edit">Edit</a>
               </Link>,
             ]}
             key={id}
