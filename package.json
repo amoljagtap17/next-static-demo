@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "server": "json-server --watch db.json --port 8000"
+    "server": "json-server --watch db.json --port 8000",
+    "export": "next build && next export",
+    "serve": "serve out"
   },
   "dependencies": {
     "antd": "^4.12.2",
@@ -17,5 +19,8 @@
     "react-dom": "17.0.1",
     "swr": "^0.4.1",
     "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "serve": "^11.3.2"
   }
 }
