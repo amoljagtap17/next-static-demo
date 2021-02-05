@@ -1,5 +1,6 @@
 import useSWR from 'swr'
-import { List, Divider } from 'antd'
+import Link from 'next/link'
+import { List } from 'antd'
 import { fetcher } from 'utils/fetcher'
 
 export const BlogList = () => {
@@ -16,7 +17,14 @@ export const BlogList = () => {
         loading={!blogs}
         dataSource={blogs}
         renderItem={({ title, id }) => (
-          <List.Item actions={[<a key="list-loadmore-edit">edit</a>]} key={id}>
+          <List.Item
+            actions={[
+              <Link href={`/edit?id=${id}`}>
+                <a key="list-loadmore-edit">edit</a>
+              </Link>,
+            ]}
+            key={id}
+          >
             {title}
           </List.Item>
         )}
