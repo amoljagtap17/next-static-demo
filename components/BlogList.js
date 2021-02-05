@@ -3,13 +3,9 @@ import { List, Divider } from 'antd'
 import { fetcher } from 'utils/fetcher'
 
 export const BlogList = () => {
-  const { data: blogs, error } = useSWR(
-    'http://localhost:8000/posts',
-    fetcher,
-    {
-      dedupingInterval: 1000 * 60 * 60,
-    }
-  )
+  const { data: blogs, error } = useSWR('/blogs', fetcher, {
+    dedupingInterval: 1000 * 60 * 60,
+  })
 
   if (error) return <div>failed to load</div>
 
